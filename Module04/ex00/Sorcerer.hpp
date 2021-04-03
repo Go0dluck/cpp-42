@@ -2,6 +2,7 @@
 #define SORCERER_HPP
 #include <iostream>
 #include <string>
+#include "Victim.hpp"
 #define RESET "\033[0m"
 #define RED "\033[31m"
 #define GREEN "\033[32m"
@@ -22,7 +23,7 @@ public:
 	Sorcerer &operator=(Sorcerer const &oper);
 	std::string getName(void) const;
 	std::string getTitle(void) const;
-	void polymorph(Victim const &);
+	void polymorph(Victim const &target) const;
 	~Sorcerer();
 };
 std::ostream &operator<<(std::ostream &out, const Sorcerer &sorcerer);

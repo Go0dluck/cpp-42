@@ -12,16 +12,17 @@
 class Victim
 {
 private:
-	std::string	_name;
+
 protected:
+	std::string	_name;
 	Victim();
 public:
 	Victim(std::string name);
 	Victim(const Victim &cpy);
 	Victim &operator=(Victim const &oper);
 	std::string getName(void) const;
-	void	getPolymorphed(void) const;
-	~Victim();
+	virtual void	getPolymorphed(void) const;
+	virtual ~Victim();
 };
 std::ostream &operator<<(std::ostream &out, const Victim &victim);
 #endif

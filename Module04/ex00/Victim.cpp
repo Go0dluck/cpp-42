@@ -28,7 +28,7 @@ std::string Victim::getName(void) const
 
 void	Victim::getPolymorphed(void) const
 {
-	std::cout << YELLOW << _name << " has been turned into a cute little sheep!" << std::endl;
+	std::cout << YELLOW << _name << " has been turned into a cute little sheep!" << RESET << std::endl;
 }
 
 Victim::~Victim()

@@ -33,6 +33,11 @@ std::string Sorcerer::getTitle(void) const
 	return (_title);
 }
 
+void	Sorcerer::polymorph(Victim const &target) const
+{
+	target.getPolymorphed();
+}
+
 std::ostream &operator<<(std::ostream & out, const Sorcerer & sorcerer)
 {
 	out << GREEN << "I am " << sorcerer.getName() << ", " << sorcerer.getTitle() << ", and I like ponies!" << RESET << std::endl;

@@ -9,7 +9,7 @@
 class Span
 {
 private:
-	int					_n;
+	size_t					_n;
 	std::vector<int>	_vcr;
 public:
 	Span();
@@ -18,7 +18,8 @@ public:
 	Span &operator=(const Span &oper);
 	~Span();
 
-	void	addNumber(int num);
+	void	addNumber(size_t num);
+	void	addNumber(std::vector<int>::iterator start, std::vector<int>::iterator stop);
 	int		shortestSpan() const;
 	int		longestSpan() const;
 	class SpanMaxSize: public std::exception
